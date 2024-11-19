@@ -12,8 +12,7 @@
       color: #00ff99;
       font-family: 'VT323', monospace;
       margin: 0;
-      text-align: center;
-      overflow: hidden;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     h1 {
@@ -42,13 +41,16 @@
       animation: background 30s linear infinite;
     }
 
+    /* Page Container */
+    .container {
+      padding: 20px 5%;
+    }
+
     /* Wallet Container */
     .wallets {
-      margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      padding: 0 5%;
     }
 
     .wallet {
@@ -110,38 +112,40 @@
   </style>
 </head>
 <body>
-  <h1>Support the Code Wizardry 🧙‍♂️</h1>
-  <div class="wallets">
-    <!-- Wallet Cards -->
-    <div class="wallet">
-      <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=025" alt="Bitcoin"> Bitcoin  
-      <div class="address">bc1q6qaqepcpp4qj6muu7plufyhw925fdal60cx9pw</div>
-      <button class="copy-btn" onclick="copyText('bc1q6qaqepcpp4qj6muu7plufyhw925fdal60cx9pw')">Copy</button>
-    </div>
-    <div class="wallet">
-      <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.svg?v=025" alt="Dogecoin"> Dogecoin  
-      <div class="address">DL9NCjxun6VMZxDaTzeyBV6XEGWyxU993J</div>
-      <button class="copy-btn" onclick="copyText('DL9NCjxun6VMZxDaTzeyBV6XEGWyxU993J')">Copy</button>
-    </div>
-    <div class="wallet">
-      <img src="https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=025" alt="Ethereum"> Ethereum  
-      <div class="address">0x3D5A971329Ab1925653E08504afa823FDDC7c961</div>
-      <button class="copy-btn" onclick="copyText('0x3D5A971329Ab1925653E08504afa823FDDC7c961')">Copy</button>
-    </div>
-    <div class="wallet">
-      <img src="https://cryptologos.cc/logos/ravencoin-rvn-logo.svg?v=025" alt="Ravencoin"> Ravencoin  
-      <div class="address">RNtZjAY76xVGGyMabbKNEmdhuhQ13iThWR</div>
-      <button class="copy-btn" onclick="copyText('RNtZjAY76xVGGyMabbKNEmdhuhQ13iThWR')">Copy</button>
-    </div>
-    <div class="wallet">
-      <img src="https://cryptologos.cc/logos/solana-sol-logo.svg?v=025" alt="Solana"> Solana  
-      <div class="address">2LiKRhaVdZB5XLHZjcGrm8zjYUKpheXrE3KdP5imeEwy</div>
-      <button class="copy-btn" onclick="copyText('2LiKRhaVdZB5XLHZjcGrm8zjYUKpheXrE3KdP5imeEwy')">Copy</button>
-    </div>
-    <div class="wallet">
-      <img src="https://cryptologos.cc/logos/ton-crystal-ton-logo.svg?v=025" alt="TON"> TON  
-      <div class="address">UQDnOupIx3l1HdwAqWiiwmb6trzwZQAxkIel8R-gniuqqgPT</div>
-      <button class="copy-btn" onclick="copyText('UQDnOupIx3l1HdwAqWiiwmb6trzwZQAxkIel8R-gniuqqgPT')">Copy</button>
+  <div class="container">
+    <h1>Support the Code Wizardry 🧙‍♂️</h1>
+    <div class="wallets">
+      <!-- Wallet Cards -->
+      <div class="wallet">
+        <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=025" alt="Bitcoin"> Bitcoin  
+        <div class="address">bc1q6qaqepcpp4qj6muu7plufyhw925fdal60cx9pw</div>
+        <button class="copy-btn" onclick="copyText('bc1q6qaqepcpp4qj6muu7plufyhw925fdal60cx9pw')">Copy</button>
+      </div>
+      <div class="wallet">
+        <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.svg?v=025" alt="Dogecoin"> Dogecoin  
+        <div class="address">DL9NCjxun6VMZxDaTzeyBV6XEGWyxU993J</div>
+        <button class="copy-btn" onclick="copyText('DL9NCjxun6VMZxDaTzeyBV6XEGWyxU993J')">Copy</button>
+      </div>
+      <div class="wallet">
+        <img src="https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=025" alt="Ethereum"> Ethereum  
+        <div class="address">0x3D5A971329Ab1925653E08504afa823FDDC7c961</div>
+        <button class="copy-btn" onclick="copyText('0x3D5A971329Ab1925653E08504afa823FDDC7c961')">Copy</button>
+      </div>
+      <div class="wallet">
+        <img src="https://cryptologos.cc/logos/ravencoin-rvn-logo.svg?v=025" alt="Ravencoin"> Ravencoin  
+        <div class="address">RNtZjAY76xVGGyMabbKNEmdhuhQ13iThWR</div>
+        <button class="copy-btn" onclick="copyText('RNtZjAY76xVGGyMabbKNEmdhuhQ13iThWR')">Copy</button>
+      </div>
+      <div class="wallet">
+        <img src="https://cryptologos.cc/logos/solana-sol-logo.svg?v=025" alt="Solana"> Solana  
+        <div class="address">2LiKRhaVdZB5XLHZjcGrm8zjYUKpheXrE3KdP5imeEwy</div>
+        <button class="copy-btn" onclick="copyText('2LiKRhaVdZB5XLHZjcGrm8zjYUKpheXrE3KdP5imeEwy')">Copy</button>
+      </div>
+      <div class="wallet">
+        <img src="https://cryptologos.cc/logos/ton-crystal-ton-logo.svg?v=025" alt="TON"> TON  
+        <div class="address">UQDnOupIx3l1HdwAqWiiwmb6trzwZQAxkIel8R-gniuqqgPT</div>
+        <button class="copy-btn" onclick="copyText('UQDnOupIx3l1HdwAqWiiwmb6trzwZQAxkIel8R-gniuqqgPT')">Copy</button>
+      </div>
     </div>
   </div>
 
