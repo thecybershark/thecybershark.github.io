@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support the Code Wizardry</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      color: #00ff99;
+      font-family: 'VT323', monospace;
+      margin: 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      text-shadow: 0px 0px 8px #00ff99, 0px 0px 15px #00ff99;
+    }
+
+    /* Background Animation */
+    @keyframes background {
+      0% { background-position: 0 0; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0 0; }
+    }
+
+    body:before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://media.giphy.com/media/3o6ZsYm5gkFgBQTtbK/giphy.gif') repeat;
+      opacity: 0.05;
+      z-index: -1;
+      animation: background 30s linear infinite;
+    }
+
+    /* Wallet Container */
+    .wallets {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0 5%;
+    }
+
+    .wallet {
+      background: rgba(10, 10, 10, 0.9);
+      border: 2px solid #00ff99;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0px 0px 15px #00ff99;
+      position: relative;
+    }
+
+    .wallet img {
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    .address {
+      margin: 10px 0;
+      word-break: break-word;
+    }
+
+    /* Copy Button */
+    .copy-btn {
+      background: #1a1a1a;
+      border: 1px solid #00ff99;
+      color: #00ff99;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .copy-btn:hover {
+      background: #00ff99;
+      color: black;
+      box-shadow: 0px 0px 10px #00ff99;
+    }
+
+    /* Ghost Animation */
+    .ghost {
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+      animation: float 3s ease-in-out infinite;
+      z-index: 10;
+    }
+
+    .ghost img {
+      height: 80px;
+      filter: drop-shadow(0 0 10px #00ff99);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Support the Code Wizardry 🧙‍♂️</h1>
+  <div class="wallets">
+    <!-- Wallet Cards -->
+    <div class="wallet">
+      <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=025" alt="Bitcoin"> Bitcoin  
+      <div class="address">bc1q6qaqepcpp4qj6muu7plufyhw925fdal60cx9pw</div>
+      <button class="copy-btn" onclick="copyText('bc1q6qaqepcpp4qj6muu7plufyhw925fdal60cx9pw')">Copy</button>
+    </div>
+    <div class="wallet">
+      <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.svg?v=025" alt="Dogecoin"> Dogecoin  
+      <div class="address">DL9NCjxun6VMZxDaTzeyBV6XEGWyxU993J</div>
+      <button class="copy-btn" onclick="copyText('DL9NCjxun6VMZxDaTzeyBV6XEGWyxU993J')">Copy</button>
+    </div>
+    <div class="wallet">
+      <img src="https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=025" alt="Ethereum"> Ethereum  
+      <div class="address">0x3D5A971329Ab1925653E08504afa823FDDC7c961</div>
+      <button class="copy-btn" onclick="copyText('0x3D5A971329Ab1925653E08504afa823FDDC7c961')">Copy</button>
+    </div>
+    <div class="wallet">
+      <img src="https://cryptologos.cc/logos/ravencoin-rvn-logo.svg?v=025" alt="Ravencoin"> Ravencoin  
+      <div class="address">RNtZjAY76xVGGyMabbKNEmdhuhQ13iThWR</div>
+      <button class="copy-btn" onclick="copyText('RNtZjAY76xVGGyMabbKNEmdhuhQ13iThWR')">Copy</button>
+    </div>
+    <div class="wallet">
+      <img src="https://cryptologos.cc/logos/solana-sol-logo.svg?v=025" alt="Solana"> Solana  
+      <div class="address">2LiKRhaVdZB5XLHZjcGrm8zjYUKpheXrE3KdP5imeEwy</div>
+      <button class="copy-btn" onclick="copyText('2LiKRhaVdZB5XLHZjcGrm8zjYUKpheXrE3KdP5imeEwy')">Copy</button>
+    </div>
+    <div class="wallet">
+      <img src="https://cryptologos.cc/logos/ton-crystal-ton-logo.svg?v=025" alt="TON"> TON  
+      <div class="address">UQDnOupIx3l1HdwAqWiiwmb6trzwZQAxkIel8R-gniuqqgPT</div>
+      <button class="copy-btn" onclick="copyText('UQDnOupIx3l1HdwAqWiiwmb6trzwZQAxkIel8R-gniuqqgPT')">Copy</button>
+    </div>
+  </div>
+
+  <!-- Ghost Animation -->
+  <div class="ghost">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Ghost_emoji_ios_12.png" alt="Ghost">
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function copyText(address) {
+      navigator.clipboard.writeText(address).then(() => {
+        alert('Address copied to clipboard: ' + address);
+      }).catch(err => {
+        console.error('Could not copy text: ', err);
+      });
+    }
+  </script>
+</body>
+</html>
